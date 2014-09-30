@@ -34,7 +34,7 @@ public class DLBTest {
     public void testPrefix() throws Exception {
         DLB dict = new DLB();
         dict.add("hello");
-        assertEquals(dict.searchPrefix(new StringBuilder("hell")),1);
+        assertEquals(dict.searchPrefix(new StringBuilder("hell")), 1);
     }
 
     //DLB.searchPrefix(StringBuilder s) should return int 3 if a word is both a prefix and a word
@@ -178,6 +178,22 @@ public class DLBTest {
     }
 
     @Test
+    //try to remove a word that has not been added
+    //ensure that added word(s) still remain, remove works
+    public void testFalseRemoval(){
+        DLB dict = new DLB();
+        assertTrue(dict.add("hello"));
+        assertTrue(dict.add("howdy"));
+
+        assertFalse(dict.remove("hey"));
+        assertTrue(dict.remove("howdy"));
+
+        assertTrue(dict.contains("hello"));
+        assertFalse(dict.contains("howdy"));
+        assertFalse(dict.contains("hey"));
+    }
+
+    @Test
     //add a prefix and a word that stems from it
     //remove prefix
     //verify that the word is still contained (by both contained and searchPrefix)
@@ -261,4 +277,33 @@ public class DLBTest {
         assertFalse(dict.equals(null));
     }
 
+    @Test
+    //try to add a string of length 1,000 to the dictionary
+    //see if it contains the string by both .contains and .searchPrefix
+    public void test1000String(){
+        DLB dict = new DLB();
+        int length = 1000;
+        StringBuilder target = new StringBuilder();
+        for (int i = 0; i <= length ; i++) {
+            target.append("a");
+        }
+        assertTrue(dict.add(target.toString()));
+        assertEquals(dict.searchPrefix(target),2);
+        assertTrue(dict.contains(target.toString()));
+    }
+
+    @Test
+    //try to add a string of length 1,000,000 to the dictionary
+    //see if it contains the string by both .contains and .searchPrefix
+    public void testSixFigString(){
+        DLB dict = new DLB();
+        int length = 1000000;
+        StringBuilder target = new StringBuilder();
+        for (int i = 0; i <= length ; i++) {
+            target.append("a");
+        }
+        assertTrue(dict.add(target.toString()));
+        assertEquals(dict.searchPrefix(target),2);
+        assertTrue(dict.contains(target.toString()));
+    }
 }

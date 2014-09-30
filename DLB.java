@@ -352,7 +352,7 @@ public class DLB implements DictInterface  //external class; provides an externa
         Node iter = curList.head;
         int targetIndex = 0;
         while (iter != null) {
-            System.out.println("Current char: " + iter.data);
+            //System.out.println("Current char: " + iter.data);
             if (iter.data == target.toCharArray()[targetIndex]) {
                 if (targetIndex == target.length()-1 &&
                         iter.data == target.toCharArray()[target.length()-1] &&
