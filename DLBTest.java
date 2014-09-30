@@ -20,12 +20,14 @@ public class DLBTest {
     private char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'};
 
     @Test
+    //DLB.searchPrefix(StringBuilder s) should return int 1 if a searched word is a prefix
     public void testPrefix() throws Exception {
         DLB dict = new DLB();
         dict.add("hello");
         assertEquals(dict.searchPrefix(new StringBuilder("hell")),1);
     }
 
+    //DLB.searchPrefix(StringBuilder s) should return int 3 if a word is both a prefix and a word
     @Test
     public void testPrefixandWord() throws Exception {
         DLB dict = new DLB();
