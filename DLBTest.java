@@ -19,12 +19,19 @@ public class DLBTest {
 
     private char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'};
 
-
     @Test
-    public void testAddandRetrieve() throws Exception {
+    public void testPrefix() throws Exception {
         DLB dict = new DLB();
         dict.add("hello");
-        assertEquals(dict.searchPrefix(new StringBuilder("hello")), 2);
+        assertEquals(dict.searchPrefix(new StringBuilder("hell")),1);
+    }
+
+    @Test
+    public void testPrefixandWord() throws Exception {
+        DLB dict = new DLB();
+        dict.add("hello");
+        dict.add("hell");
+        assertEquals(dict.searchPrefix(new StringBuilder("hell")),3);
     }
 
     @Test
@@ -86,6 +93,7 @@ public class DLBTest {
             System.out.println(randomString);
             theDLB.add(randomString);
         }
+        //TODO resolve 'size has private access in DLB' error
         assertEquals(theDLB.size(), this.WORD_COUNT);
     }
 
