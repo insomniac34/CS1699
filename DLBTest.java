@@ -16,6 +16,7 @@ public class DLBTest {
                                    "stuff",
                                    "things"
                                    };
+
     private char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'};
 
 
@@ -59,10 +60,32 @@ public class DLBTest {
         }
 
         for (String randomString : randomStrings) {
+            theDLB.add(randomString);
+            assertEquals(theDLB.contains(randomString), true);
+        }
+    }
+
+    @Test
+    public void testRandomizedWordInsertionCount() {
+        DLB theDLB = new DLB();
+
+        Random rnd = new Random();
+        rnd.setSeed(0);
+        String[] randomStrings = new String[this.WORD_COUNT];
+
+        for (int i = 0; i < this.WORD_COUNT; i++) {
+            char[] chars = new char[this.WORD_SIZE];
+            for (int j = 0; j < this.WORD_SIZE; j++) {
+                int randomLetterIndex = rnd.nextInt(this.alphabet.length);
+                chars[j] = this.alphabet[randomLetterIndex];
+            }
+            randomStrings[i] = new String(chars);
+        }
+
+        for (String randomString : randomStrings) {
             System.out.println(randomString);
             theDLB.add(randomString);
         }
-
         assertEquals(theDLB.size(), this.WORD_COUNT);
     }
 
