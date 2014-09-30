@@ -120,9 +120,7 @@ public class DLBTest {
             System.out.println(randomString);
             theDLB.add(randomString);
         }
-        //TODO resolve 'size has private access in DLB' error
-        //I have commented this line out for now to run other tests
-        //assertEquals(theDLB.size(), this.WORD_COUNT);
+        assertEquals(theDLB.size(), this.WORD_COUNT);
     }
 
     /*
@@ -168,8 +166,22 @@ public class DLBTest {
         assertEquals(dict.searchPrefix(new StringBuilder("hello")),0);
     }
 
+    @Test
+    //add a prefix and a word that stems from it
+    //remove prefix
+    //verify that the word is still contained (by both contained and searchPrefix)
+    public void testPrefixRemoval() {
+        DLB dict = new DLB();
+        dict.add("pre");
+        dict.add("prefix");
+        dict.remove("pre");
+        assertEquals(dict.searchPrefix(new StringBuilder("prefix")), 2);
+        assertTrue(dict.contains("prefix"));
+    }
+
     //performance test
     //attempt to load every word in war and peace into dictionary
+    //then check that every word is contained in the dictionary
     //uses bufferedreader and stringtokenizer
     //WARNING: expect long runtime
     @Test
@@ -178,15 +190,64 @@ public class DLBTest {
         File warPeace = new File("warandpeace.txt");
         StringTokenizer tk;
         String str;
+        String nxt;
+        boolean allContained = true;
         if(warPeace.isFile()){
             BufferedReader wpReader = new BufferedReader(new FileReader(warPeace));
             while((str = wpReader.readLine())!=null){
-                tk = new StringTokenizer(str , ",.!?' ");
+                tk = new StringTokenizer(str , ",.!?*-' ");
                 while(tk.hasMoreTokens()){
-                    dict.add(tk.nextToken());
+                    nxt = tk.nextToken();
+                    if (nxt != null){
+                        dict.add(nxt);
+                    }
+                }
+            }
+            wpReader.close();
+            wpReader = new BufferedReader(new FileReader(warPeace));
+            while((str = wpReader.readLine())!=null){
+                tk = new StringTokenizer(str , ",.!?*-' ");
+                while(tk.hasMoreTokens()){
+                    nxt = tk.nextToken();
+                    if (nxt != null){
+                        if(dict.searchPrefix(new StringBuilder(nxt)) == 0){
+                            allContained = false;
+                        }
+                    }
                 }
             }
         }
+        assertTrue(allContained);
+    }
+
+    @Test
+    //try to add a null string to the dictionary
+    public void testNullAdd() {
+        DLB dict = new DLB();
+        assertNotNull(dict.add(null));
+    }
+
+    @Test
+    //try to search for a null StringBuilder
+    public void testNullSearch(){
+        DLB dict = new DLB();
+        dict.add("hello");
+        assertNotNull(dict.searchPrefix(new StringBuilder(null)));
+    }
+
+    @Test
+    //call DLB.contains(null)
+    public void testNullContains(){
+        DLB dict = new DLB();
+        dict.add("hello");
+        assertNotNull(dict.contains(null));
+    }
+
+    @Test
+    //no instantiated DLB should equal null
+    public void testNotEqualsNull(){
+        DLB dict = new DLB();
+        assertFalse(dict.equals(null));
     }
 
 }

@@ -118,7 +118,7 @@ public class DLB implements DictInterface  //external class; provides an externa
                                 //System.out.println(curNode.data);
                                 if (curNode.data==this.SENTINEL)
                                 {
-                                    System.out.println("add() error: String has already been added to the DLB.");
+                                    //System.out.println("add() error: String has already been added to the DLB.");
                                     this.size--;
                                     return false;
                                 }
@@ -133,7 +133,7 @@ public class DLB implements DictInterface  //external class; provides an externa
                     }
                     else //else s is already a word in the DLB; return false
                     {
-                        System.out.println("add() error: String has already been added to the DLB.");
+                        //System.out.println("add() error: String has already been added to the DLB.");
                         this.size--;
                         return false;
                     }
