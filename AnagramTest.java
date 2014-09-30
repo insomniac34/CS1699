@@ -1,28 +1,11 @@
-import org.junit.After;
-import org.junit.Before;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class AnagramTest {
-
-    @Before
-    public void setUp() throws Exception {
-
-    }
-
-    @After
-    public void tearDown() throws Exception {
-
-    }
-
     @Test
-    public void testMain() throws Exception {
-
-    }
-
-    @Test
-    public void testAnagramize() throws Exception {
-
+    public void anotherTest() {
+        DLB myDLB = new DLB();
+        myDLB.add("blah");
+        assertEquals(myDLB, myDLB);
     }
 }

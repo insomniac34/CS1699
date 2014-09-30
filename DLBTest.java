@@ -55,9 +55,20 @@ public class DLBTest {
 
     }
 
+    /*
+    * Tests the growth of the DLB as words are inserted
+    * */
     @Test
-    public void testDLBWordCount() {
-
+    public void testDLBGrowth() {
+        DLB theDLB = new DLB();
+        int trieSize = 0;
+        assertEquals(theDLB.size(), trieSize);
+        for (String word : testWords) {
+            theDLB.add(word);
+            System.out.println("DLB.size " + theDLB.size() + "trieSize " + trieSize);
+            trieSize++;
+            assertEquals(theDLB.size(), trieSize);
+        }
     }
 
     /*

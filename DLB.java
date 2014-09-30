@@ -38,25 +38,30 @@ public class DLB implements DictInterface  //external class; provides an externa
     {
         this.isEmpty=true;
         this.linkedListCount = 0;
+        this.size = 0;
     }
     public DLB(MyDictionary M)
     {
         this.isEmpty=true;
+        this.size = 0;
     }
     public DLB (char c)
     {
         this.isEmpty=true;
         String s = new String(new Character(c).toString());
         add(s);
+        this.size = 1;
     }
     public DLB(String s)
     {
         this.linkedListCount = 0;
         this.isEmpty=true;
         this.add(s);
+        this.size = 1;
     }
     public DLB(StringBuilder s)
     {
+        this.size = 1;
         this.linkedListCount = 0;
         this.isEmpty=true;
         this.add(s.toString());
