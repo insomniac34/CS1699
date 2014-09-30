@@ -60,6 +60,9 @@ public class DLBTest {
 
     }
 
+    /*
+    * Inserts a series of unique, randomly generated Strings into the DLB; then asserts their presence
+    * */
     @Test
     public void testRandomizedWordInsertion() {
         DLB theDLB = new DLB();
@@ -72,7 +75,6 @@ public class DLBTest {
                 int randomLetterIndex = rnd.nextInt(this.alphabet.length);
                 chars[j] = this.alphabet[randomLetterIndex];
             }
-
             String newString = (randomStrings.contains(new String(chars))) ? null : new String(chars);
             if (newString == null) {
                String altString = randomStrings.get(0);
@@ -95,6 +97,9 @@ public class DLBTest {
         }
     }
 
+    /*
+    * Inserts a series of unique, randomly generated Strings into the DLB, then verifies the DLB contains the correct # of words
+    * */
     @Test
     public void testRandomizedWordInsertionCount() {
         DLB theDLB = new DLB();
@@ -120,16 +125,17 @@ public class DLBTest {
         //assertEquals(theDLB.size(), this.WORD_COUNT);
     }
 
+    /*
+    * Inserts words from the global test list, verifies their presence in the DLB
+    * */
     @Test
-    public void testSearchPrefix() {
+    public void testSearchPrefixPredefinedWords() {
         DLB theDLB = new DLB();
         for (String word : testWords) {
             theDLB.add(word);
         }
 
         for (String word : testWords) {
-            System.out.println("Testing word: " + word);
-
             assertEquals(theDLB.searchPrefix(word), IS_WORD_ONLY);
         }
     }
