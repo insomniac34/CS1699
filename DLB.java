@@ -19,6 +19,7 @@ import java.awt.*;
 //@SuppressWarnings("unused")
 public class DLB implements DictInterface  //external class; provides an external medium for the various LinkedLists and their nodes to be created within; these, coloquially, make up the De La Brandais Trie.
 {
+    private int linkedListCount;
     private final int IS_WORD_ONLY = 2;
     private final int IS_PREFIX_AND_WORD = 3;
     private final int IS_PREFIX_ONLY = 1;
@@ -36,6 +37,7 @@ public class DLB implements DictInterface  //external class; provides an externa
     public DLB()
     {
         this.isEmpty=true;
+        this.linkedListCount = 0;
     }
     public DLB(MyDictionary M)
     {
@@ -49,18 +51,29 @@ public class DLB implements DictInterface  //external class; provides an externa
     }
     public DLB(String s)
     {
+        this.linkedListCount = 0;
         this.isEmpty=true;
         this.add(s);
     }
     public DLB(StringBuilder s)
     {
+        this.linkedListCount = 0;
         this.isEmpty=true;
         this.add(s.toString());
     }
 
+    public int size() {
+        return this.size;
+    }
+
     //DLB METHODS:
+    public int linkedListCount() {
+        return 0;
+    }
+
     public boolean add(String s) //embeds s into the DLB...
     {
+        this.size+=1;
         int pos=-1;
         if (this.isEmpty==true) //if the DLB is empty
         {
@@ -106,6 +119,7 @@ public class DLB implements DictInterface  //external class; provides an externa
                                 if (curNode.data==this.SENTINEL)
                                 {
                                     System.out.println("add() error: String has already been added to the DLB.");
+                                    this.size--;
                                     return false;
                                 }
                                 //prevNode = curNode;
@@ -120,6 +134,7 @@ public class DLB implements DictInterface  //external class; provides an externa
                     else //else s is already a word in the DLB; return false
                     {
                         System.out.println("add() error: String has already been added to the DLB.");
+                        this.size--;
                         return false;
                     }
                 }
@@ -207,8 +222,12 @@ public class DLB implements DictInterface  //external class; provides an externa
         {
             DFS(tempNode.siblingNode);
         }
-
     }
+
+    public int searchPrefix(String s) {
+        return this.searchPrefix(new StringBuilder(s));
+    }
+
     public int searchPrefix(StringBuilder s)
     {
         iteratorList = this.root;
@@ -262,6 +281,11 @@ public class DLB implements DictInterface  //external class; provides an externa
             return 0;
         }
     }
+
+    public int searchPrefix(String s, int start, int end) {
+        return this.searchPrefix(new StringBuilder(s), start, end);
+    }
+
     public int searchPrefix(StringBuilder s, int start, int end)
     {
         iteratorList = this.root;
@@ -374,7 +398,6 @@ public class DLB implements DictInterface  //external class; provides an externa
                             }
                             prev = deletionTarget;
                             deletionTarget = deletionTarget.siblingNode;
-
                         }
                         ret = true;
                         break;
