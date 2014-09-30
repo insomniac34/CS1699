@@ -19,6 +19,7 @@ public class DLBTest {
 
     private final int WORD_COUNT = 10;
     private final int WORD_SIZE = 10;
+    private final int BULK_WORD_COUNT = 1000;
     private final String[] testWords = {
                                    "test",
                                    "word",
@@ -52,7 +53,6 @@ public class DLBTest {
         assertEquals(theDLB.isEmpty, true);
         theDLB.add("Test 1");
         assertEquals(theDLB.contains("Test 1"), true);
-
     }
 
     /*
@@ -149,19 +149,72 @@ public class DLBTest {
         }
     }
 
+    /*
+    * Inserts PREFIXES of words from the global test list, verifies their presence in the DLB
+    * */
     @Test
     public void testSearchPrefixWithBounds() {
+        DLB theDLB = new DLB();
+        ArrayDeque<String> prefixList = new ArrayDeque<String>();
 
+        for (String word : testWords) {
+            theDLB.add(word);
+            System.out.println("Pushing " + word.substring(2));
+            prefixList.push(word.substring(0, 2));
+        }
+
+        for (String prefix : prefixList) {
+            System.out.println("testing prefix..." + prefix);
+            assertEquals(theDLB.searchPrefix(prefix), IS_PREFIX_ONLY);
+        }
     }
 
+    /*
+    * Tests performance of search functionality with LOTS of words in DLB and Dictionary...DLB should always win
+    * */
     @Test
     public void testDictionaryPerformance() {
+        DLB theDLB= new DLB();
+        MyDictionary theDictionary = new MyDictionary();
 
+        Random rnd = new Random();
+        rnd.setSeed(0);
+        String[] randomStrings = new String[this.WORD_COUNT];
+
+        for (int i = 0; i < BULK_WORD_COUNT; i++) {
+            char[] chars = new char[this.WORD_SIZE];
+            for (int j = 0; j < this.WORD_SIZE; j++) {
+                int randomLetterIndex = rnd.nextInt(this.alphabet.length);
+                chars[j] = this.alphabet[randomLetterIndex];
+            }
+            randomStrings[i] = new String(chars);
+        }
+
+        for (String randomString : randomStrings) {
+            theDLB.add(randomString);
+            theDictionary.add(randomString);
+        }
+
+        //picks at random 10 words from randomStrings[]
+        int[] randomIndices = new int[10];
+
+
+        //assertEquals(theDLB.size(), this.WORD_COUNT);
     }
 
+    /*
+    * Tests the addition and presence of a single string composed of numerous other strings...
+    * */
     @Test
-    public void testMultipleWords() {
+    public void testConcatenatedWords() {
+        String cat = this.testWords[0];
+        for (int i = 1; i < this.testWords.length; i++) {
+            cat+=new String(" "+this.testWords[i]);
+        }
 
+        DLB theDLB = new DLB();
+        theDLB.add(cat);
+        assertEquals(theDLB.contains(cat), true);
     }
 
     @Test
