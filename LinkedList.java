@@ -16,18 +16,33 @@ public class LinkedList //a basic linked list data structure; used for holding d
         Node newNode = new Node(c);
         this.head = newNode;
         newNode.thisList=this;
+        this.size++;
     }
 
-    //LinkedList METHODS:
-    public void insert(char c)
-    {
-
+    public boolean contains(char c) {
+        boolean ret = false;
+        Node iter = this.head;
+        while (iter!=null) {
+            if (iter.data==c) {
+                ret = true;
+                break;
+            }
+            else {
+                iter = iter.siblingNode;
+            }
+        }
+        return ret;
     }
 
-    public boolean contains(char c)
-    {
-        //TODO implement method
-        return false;
+    public void insert(char c) {
+        Node newNode = new Node(c);
+        if (this.size == 0) {
+            this.head = newNode;
+        }
+        else {
+            newNode.siblingNode = this.head;
+            this.head = newNode;
+        }
+        this.size++;
     }
-
 }
