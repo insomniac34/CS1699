@@ -2,10 +2,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 
@@ -29,6 +33,11 @@ public class DLBTest {
                                    };
 
     private final char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'};
+
+    public static long getDateDiff(Date date1, Date date2, TimeUnit timeUnit) {
+        long diffInMillies = date2.getTime() - date1.getTime();
+        return timeUnit.convert(diffInMillies,TimeUnit.MILLISECONDS);
+    }
 
     @Test
     //DLB.searchPrefix(StringBuilder s) should return int 1 if a searched word is a prefix
@@ -179,7 +188,7 @@ public class DLBTest {
 
         Random rnd = new Random();
         rnd.setSeed(0);
-        String[] randomStrings = new String[this.WORD_COUNT];
+        String[] randomStrings = new String[BULK_WORD_COUNT];
 
         for (int i = 0; i < BULK_WORD_COUNT; i++) {
             char[] chars = new char[this.WORD_SIZE];
@@ -195,12 +204,44 @@ public class DLBTest {
             theDictionary.add(randomString);
         }
 
-        //picks at random 10 words from randomStrings[]
-        int[] randomIndices = new int[10];
+        //picks at random 100 words from randomStrings[] to search for...
+        int[] randomIndices = new int[100];
+        for (int i = 0; i < 100; i++) {
+            int r = rnd.nextInt(BULK_WORD_COUNT);
+            randomIndices[i] = r;
+        }
 
+        int[] dictionaryResults = new int[100];
+        int[] dlbResults = new int[100];
+        int i = 0;
 
+        //test DICTIONARY speed:
+        Date dictionaryStartDate = new Date();
+        for (int index : randomIndices) {
+            dictionaryResults[i] = theDictionary.searchPrefix(new StringBuilder(randomStrings[index]));
+            i++;
+        }
+        Date dictionaryEndDate = new Date();
+        long dictionaryInterval = getDateDiff(dictionaryStartDate, dictionaryEndDate, TimeUnit.MILLISECONDS);
+
+        //test DLB speed
+        Date dlbStartDate = new Date();
+        i = 0;
+        for (int index : randomIndices) {
+            dlbResults[i] = theDLB.searchPrefix(new StringBuilder(randomStrings[index]));
+            i++;
+        }
+        Date dlbEndDate = new Date();
+        long dlbInterval = getDateDiff(dlbStartDate, dlbEndDate, TimeUnit.MILLISECONDS);
+
+        System.out.println("dictionary interval: " + dictionaryInterval);
+        System.out.println("dlb interval: " + dlbInterval);
+
+        assertTrue(dictionaryInterval > dlbInterval);
         //assertEquals(theDLB.size(), this.WORD_COUNT);
     }
+
+
 
     /*
     * Tests the addition and presence of a single string composed of numerous other strings...
