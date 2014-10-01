@@ -8,4 +8,10 @@ public class AnagramTest {
         myDLB.add("blah");
         assertEquals(myDLB, myDLB);
     }
+
+    @Test
+    public void anagramTest() {
+        Anagram agram = new Anagram();
+        agram.anagramize(new StringBuilder(" "),new char[10],0,10);
+    }
 }

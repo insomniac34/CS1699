@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat;
 public class Anagram 
 {
 	public static DictInterface d; //data structure interface; morphs into a DLB or MyDictionary based on user input
-	protected final static ArrayList<String> anagramList = new ArrayList<String>(0); //data structure for holding anagrams as they are found
+	public final static ArrayList<String> anagramList = new ArrayList<String>(0); //data structure for holding anagrams as they are found
 	private static String struct; //input string object; declared outside of main so that text output during testing could display what the user entered.
 	
 	public static void main(String[] args) throws FileNotFoundException //input: strings in a text file broken up by lines, can contain spaces. IGNORE SPACES. output: all possible valid words/phrases
