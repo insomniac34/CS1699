@@ -45,4 +45,15 @@ public class LinkedList //a basic linked list data structure; used for holding d
         }
         this.size++;
     }
+
+    public void insert(Node n) {
+        if (this.size == 0) {
+            this.head = n;
+        }
+        else {
+            n.siblingNode = this.head;
+            this.head = n;
+        }
+        this.size++;
+    }
 }
