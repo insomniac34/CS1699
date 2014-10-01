@@ -245,8 +245,6 @@ public class DLBTest {
         //assertEquals(theDLB.size(), this.WORD_COUNT);
     }
 
-
-
     /*
     * Tests the addition and presence of a single string composed of numerous other strings...
     * */
@@ -378,7 +376,7 @@ public class DLBTest {
     @Test
     //try findSentinel on with a mock of a linked list
     public void testFindSentinel() {
-        DLB.LinkedList listMock = Mockito.mock(DLB.LinkedList.class);
+        LinkedList listMock = Mockito.mock(LinkedList.class);
         DLB dict = new DLB();
         assertTrue(dict.findSentinel(listMock));
     }

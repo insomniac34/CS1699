@@ -534,14 +534,11 @@ public class DLB implements DictInterface  //external class; provides an externa
                     System.out.println(curNode.data);
                 }
             }
-
         }
         else
         {
             System.out.println("DLB is empty. Unable to print root.");
         }
-
-
     }
     protected boolean insertSentinel(Node curNode) //goes to the next linkedlist, adds a new sentinel node
     {
@@ -573,75 +570,6 @@ public class DLB implements DictInterface  //external class; provides an externa
             tempNode = tempNode.siblingNode;
         }
         tempNode = new Node(c);
-    }
-
-    //DLB CLASSES:
-    protected class LinkedList //a basic linked list data structure; used for holding different "layers" of letters (NOT words) represented via the Node class.
-    {
-        public Node head; //head of the Linked List
-        public int i;
-        public LinkedList thisList = this;
-        public int size;
-
-        //LinkedList CONSTRUCTORS:
-        public LinkedList()
-        {
-
-        }
-        public LinkedList(char c)
-        {
-            Node newNode = new Node(c);
-            this.head = newNode;
-            newNode.thisList=this;
-        }
-
-        //LinkedList METHODS:
-        public void insert(char c)
-        {
-
-        }
-
-        public boolean contains(char c)
-        {
-            //TODO implement method
-            return false;
-        }
-
-    }
-
-    protected class Node
-    {
-        //Node FIELDS:
-        public Node siblingNode=null; //connects to the next Node object within the LinkedList object; that is, the letters of a different word at this iterative level of the DLB
-        public Node childNode=null; //connects to the next Node object in this current word abstraction; that is,
-        public char data; //holds a character within some word W; if data = '*', this symbolizes the end of a word...
-        public LinkedList thisList;
-
-        //Node CONSTRUCTORS:
-        public Node(char c) //constructor
-        {
-            this.data = c;
-        }
-        public Node(Node copy) {
-            this.siblingNode = copy.siblingNode;
-            this.childNode = copy.childNode;
-            this.data = copy.data;
-            this.thisList = copy.thisList;
-        }
-
-        //Node METHODS:
-
-        public LinkedList getCurrentList() {
-            return this.thisList;
-        }
-        public char getData()
-        {
-            return this.data;
-        }
-        public void setData(char c)
-        {
-            this.data = c;
-        }
     }
 }
 	
