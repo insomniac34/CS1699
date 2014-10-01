@@ -23,7 +23,7 @@ public class LinkedList //a basic linked list data structure; used for holding d
         boolean ret = false;
         Node iter = this.head;
         while (iter!=null) {
-            if (iter.data==c) {
+            if (iter.getData()==c) {
                 ret = true;
                 break;
             }
