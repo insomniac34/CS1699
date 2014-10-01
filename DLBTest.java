@@ -12,6 +12,10 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
+import static org.mockito.Matchers.anyChar;
+import static org.mockito.Mockito.when;
+
+import org.mockito.*;
 
 public class DLBTest {
 
@@ -369,6 +373,14 @@ public class DLBTest {
     public void testNotEqualsNull(){
         DLB dict = new DLB();
         assertFalse(dict.equals(null));
+    }
+
+    @Test
+    //try findSentinel on with a mock of a linked list
+    public void testFindSentinel() {
+        DLB.LinkedList listMock = Mockito.mock(DLB.LinkedList.class);
+        DLB dict = new DLB();
+        assertTrue(dict.findSentinel(listMock));
     }
 
     @Test

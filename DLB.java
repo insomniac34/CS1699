@@ -564,6 +564,7 @@ public class DLB implements DictInterface  //external class; provides an externa
     {
         LinkedList newList = new LinkedList(c);
     }
+
     private void insert(char c, LinkedList curList) //for testing purposes
     {
         Node tempNode = curList.head;
@@ -598,6 +599,12 @@ public class DLB implements DictInterface  //external class; provides an externa
         public void insert(char c)
         {
 
+        }
+
+        public boolean contains(char c)
+        {
+            //TODO implement method
+            return false;
         }
 
     }
