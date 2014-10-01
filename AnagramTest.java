@@ -1,5 +1,13 @@
 import static org.junit.Assert.*;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
 public class AnagramTest {
     @Test
@@ -7,11 +15,5 @@ public class AnagramTest {
         DLB myDLB = new DLB();
         myDLB.add("blah");
         assertEquals(myDLB, myDLB);
-    }
-
-    @Test
-    public void anagramTest() {
-        Anagram agram = new Anagram();
-        agram.anagramize(new StringBuilder(" "),new char[10],0,10);
     }
 }
