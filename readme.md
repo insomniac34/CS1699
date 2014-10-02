@@ -13,10 +13,22 @@ We chose to test this project because it was code that had been written previous
 *note where the code is located*
 
 Executed Unit Tests
-*screenshot of executed unit tests*
-![Image of Executed Tests](https://github.com/laboon/executedtests.jpg)
+![Image of Executed Tests](https://github.com/insomniac34/CS1699/blob/master/tests.png)
 
 Code Coverage
-*screenshot of code coverage tool*
+
+To determine the code coverage of our tests, we used the code coverage analysis tool that is included with the IntelliJ IDEA.
+
 ![Image of Code Coverage](https://github.com/insomniac34/CS1699/blob/master/codecoverage.png)
 
+Here is the table from the screenshot:
+
+|	Element |Class % | Method %  | Line %  |
+|---------------|--------|-----------|---------|
+|	     DLB|   100% | 	43%  |   55%   |
+|        DLBTest|   100% | 	100% |   84%   |
+|     LinkedList|   100% |      100% |   93%   |
+| LinkedListTest|   100% |      100% |   93%   |
+|   MyDictionary|   100% |      75%  |   48%   |
+|   	    Node|   100% |      80%  |   86%   |
+|   	NodeTest|   100% |      100% |   88%   |
