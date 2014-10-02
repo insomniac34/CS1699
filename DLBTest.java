@@ -396,7 +396,7 @@ public class DLBTest {
         assertTrue(dict.contains(target.toString()));
     }
 
-    @Test
+    @Test(timeout=100000)
     //try to add a string of length 1,000,000 to the dictionary
     //see if it contains the string by both .contains and .searchPrefix
     public void testSixFigString(){
