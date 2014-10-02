@@ -78,6 +78,16 @@ public class LinkedListTest {
             assertEquals(linkedList.head, node);
         }
     }
+
+    //Test linked list constructor with char
+    //Verify that linked list contains char constructed with
+    @Test
+    public void testConstructor() {
+        for (char letter : alphabet) {
+            LinkedList linkedList = new LinkedList(letter);
+            assertTrue(linkedList.contains(letter));
+        }
+    }
 }
 
 
