@@ -1,12 +1,14 @@
 Anagram Generator with de la Briandais Data Structure
 
 Tyler Raborn and Justin Rushin III
+CS1699 - DELIVERABLE 2: Unit Testing and Code Coverage 
+https://github.com/insomniac34/CS1699
 
-CS1699 - DELIVERABLE 2: Unit Testing and Code Coverage
+**Introduction:**
+The De La Briandias Tree is a type of trie data structure that features extremely fast String insertion and lookup times. Similar implementations are used in commercial software all
+over the market, from the spellchecker in Microsoft Word to the word suggestion system in Android's text messenger program, to the autocomplete functionalities in IDE's such as Visual Studio and Eclipse. It is comprised of a subset of far more commonplace data structures. In this case the DLB is comprised of a singly-linked list which itself is comprised of simple Node objects. Traversing the trie requires using both of these objects. We chose to test this project because it was code that had been written previously for a class that we both have taken. The fact that the program and data structures deal with strings, nodes, and linked lists gave us a good amount of code to cover.
 
-We chose to test this project because it was code that had been written previously for a class that we both have taken. The fact that the program and data structures deal with strings, nodes, and linked lists gave us a good amount of code to cover.
-
-Overview of Objects:
+**Overview of Classes/Objects**:
 
 Anagram.java
 
@@ -28,7 +30,7 @@ Node.java
 
 This is a node for use in the Linked List and the de la Briandais trie. It is also tested by our unit tests.
 
-Concerns
+**Concerns**
 
 Difficulty writing the tests occurred when we wanted to test the Node and LinkedList implementations. Originally, they were inner classes of the DLB class and this made mocking, stubbing, and general testing difficult. We changed the implementation of the original program to make them separate classes so that we could better test them. It was also difficult to make any mocking or stubbing tests for the DLB class because few objects are used in it, just char and String arguments and parameters.
 
@@ -87,7 +89,7 @@ Executed Unit Tests
 ![Image of Executed Tests](https://github.com/insomniac34/CS1699/blob/master/tests.png)
 Not *all* the executed unit tests display in this screenshot. To see the exported results of the unit tests, see file in repo "Test Results - ALl _in_CS1699.html".
 
-Code Coverage
+**Code Coverage**
 
 
 To determine the code coverage of our tests, we used the code coverage analysis tool that is included with the IntelliJ IDEA.
