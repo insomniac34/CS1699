@@ -1,4 +1,5 @@
-Anagram Generator with de la Briandais Data Structure
+
+**Anagram Generator with de la Briandais Data Structure**
 
 Tyler Raborn and Justin Rushin III
 CS1699 - DELIVERABLE 2: Unit Testing and Code Coverage 
