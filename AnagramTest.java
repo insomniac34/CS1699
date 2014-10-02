@@ -10,10 +10,5 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 public class AnagramTest {
-    @Test
-    public void anotherTest() {
-        DLB myDLB = new DLB();
-        myDLB.add("blah");
-        assertEquals(myDLB, myDLB);
-    }
+
 }
