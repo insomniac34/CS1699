@@ -18,5 +18,5 @@ Executed Unit Tests
 
 Code Coverage
 *screenshot of code coverage tool*
-![Image of Code Coverage](https://github.com/laboon/codecoverage.jpg)
+![Image of Code Coverage](https://github.com/laboon/codecoverage.png)
 
