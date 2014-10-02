@@ -7,14 +7,6 @@ import static org.mockito.Mockito.when;
 public class LinkedListTest {
 
     private final char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'};
-    private final String[] testWords = {
-            "blood",
-            "ebola",
-            "virus",
-            "liberia",
-            "texas",
-            "doomed"
-    };
 
     @Test
     //mock a node with value 'a', set to the head of ll
@@ -84,21 +76,6 @@ public class LinkedListTest {
             Node node = new Node(letter);
             linkedList.insert(node);
             assertEquals(linkedList.head, node);
-        }
-    }
-
-    /*
-    * Tests the stability of the linked list by breaking up words of arbitrary lengths into chars and inserting them one at a time into the data structure, then asserting that LL size == word length
-    * */
-    @Test
-    public void testWordInsertion() {
-        for (String word : testWords) {
-            char[] letters = word.toCharArray();
-            LinkedList linkedList = new LinkedList();
-            for (char letter : letters) {
-                linkedList.insert(letter);
-            }
-            assertEquals(linkedList.size, word.length());
         }
     }
 }
