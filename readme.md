@@ -18,5 +18,5 @@ Executed Unit Tests
 
 Code Coverage
 *screenshot of code coverage tool*
-![Image of Code Coverage](https://github.com/insomniac34/CS1699/codecoverage.png)
+![Image of Code Coverage](https://github.com/insomniac34/CS1699/blob/master/codecoverage.png)
 
