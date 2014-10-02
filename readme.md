@@ -30,11 +30,9 @@ Node.java
 
 Concerns
 
-*insert description of issues faced when writing these tests*
+Difficulty writing the tests occurred when we wanted to test the Node and LinkedList implementations. Originally, they were inner classes of the DLB class and this made mocking, stubbing, and general testing difficult. We changed the implementation of the original program to make them separate classes so that we could better test them. It was also difficult to make any mocking or stubbing tests for the DLB class because few objects are used in it, just char and String arguments and parameters.
 
-*insert issues expected going forward based on experiences*
-
-*insert detail all failing tests in concerns section*
+The results of our test show that the DLB is flawed and functions properly in some but not all cases. It works well in the context that it is used in Anagram.java but functionality or patterns of use outside of those encountered in that context result in exceptions or incorrect return values. Particularly, null handling needs to be incorporated into the DLB. Additionally, the remove, contains, and searchPrefix functions - all have unique errors especially when used in conjunction with each other.
 
 Failing Tests:
 
