@@ -10,23 +10,23 @@ Overview of Objects:
 
 Anagram.java
 
-*insert description of Anagram.java*
+This class is the main program that takes user input ( a file) and generates output (anagrams of words in the file). Test code was not written for this program even though a test class was made.
 
 MyDictionary.java
 
-*insert description of MyDictionary.java*
+This is the sample dictionary structure for use by the Anagram program. It is tested in comparison to the DLB.
 
 DLB.java
 
-*insert description of DLB.java*
+This is a de la Briandais trie structure used to implement a dictionary for the Anagram program. Its functionality is tested by several unit tests.
 
 LinkedList.java
 
-*insert description of LinkedList.java*
+This is a linked list implementation that is used by the de la Briandais trie. It is also tested by our unit tests.
 
 Node.java
 
-*insert description of Node.java*
+This is a node for use in the Linked List and the de la Briandais trie. It is also tested by our unit tests.
 
 Concerns
 
