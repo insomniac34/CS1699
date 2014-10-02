@@ -573,7 +573,7 @@ jQuery.cookie = function(name, value, options) {
 <div id="container">
 <div id="header">
 <div class="time">1 m 41 s</div>
-<h1>All in CS1699: <strong><span class="total">30 total, </span><span class="error">6 error, </span><span class="failed">6 failed, </span><span class="passed">18 passed</span></strong>
+<h1>All in CS1699: <strong><span class="total">30 total, </span><span class="error">6 error, </span><span class="failed">5 failed, </span><span class="passed">19 passed</span></strong>
 </h1>
 <div id="treecontrol">
 <ul>
@@ -601,21 +601,21 @@ jQuery.cookie = function(name, value, options) {
 <ul>
 <li class="level test">
 <span><em class="time">
-<div class="time">4 ms</div>
+<div class="time">5 ms</div>
 </em><em class="status">passed</em>testRandomizedWordInsertion</span>
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">376 ms</div>
+<div class="time">404 ms</div>
 </em><em class="status">passed</em>testDictionaryPerformance</span>
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">231 ms</div>
+<div class="time">149 ms</div>
 </em><em class="status">error</em>testFindSentinel</span>
 <ul>
 <li class="text">
-<span class="stdout">dictionary interval: 26<br/>dlb interval: 1<br/></span>
+<span class="stdout">dictionary interval: 22<br/>dlb interval: 1<br/></span>
 </li>
 <li class="text">
 <span class="stderr">java.lang.NullPointerException<br/>	at DLB.searchList(DLB.java:463)<br/>	at DLB.findSentinel(DLB.java:451)<br/>	at DLBTest.testFindSentinel(DLBTest.java:381)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)<br/>	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)<br/>	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runners.Suite.runChild(Suite.java:127)<br/>	at org.junit.runners.Suite.runChild(Suite.java:26)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)<br/>	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)<br/></span>
@@ -624,7 +624,7 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">1 ms</div>
+<div class="time">0 ms</div>
 </em><em class="status">passed</em>testSearchPrefixPredefinedWords</span>
 </li>
 <li class="level test">
@@ -641,11 +641,6 @@ jQuery.cookie = function(name, value, options) {
 <span><em class="time">
 <div class="time">1 ms</div>
 </em><em class="status">passed</em>testRandomizedWordInsertionCount</span>
-<ul>
-<li class="text">
-<span class="stdout">ghecicidgc<br/>ficbifegfc<br/>eacfibghai<br/>ccfcfcgceg<br/>chicbdbhbg<br/>edfdghhidh<br/>ihhgdghiha<br/>ceicigfaeb<br/>hgaeaahhdh<br/>dhddcegdaa<br/></span>
-</li>
-</ul>
 </li>
 <li class="level test">
 <span><em class="time">
@@ -654,12 +649,17 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">3 ms</div>
+<div class="time">4 ms</div>
 </em><em class="status">passed</em>test1000String</span>
+<ul>
+<li class="text">
+<span class="stdout">SENTINEL!!!<br/>ghecicidgc<br/>ficbifegfc<br/>eacfibghai<br/>ccfcfcgceg<br/>chicbdbhbg<br/>edfdghhidh<br/>ihhgdghiha<br/>ceicigfaeb<br/>hgaeaahhdh<br/>dhddcegdaa<br/>SENTINEL!!!<br/></span>
+</li>
+</ul>
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">491 ms</div>
+<div class="time">347 ms</div>
 </em><em class="status">error</em>warandPeaceTest</span>
 <ul>
 <li class="text">
@@ -672,16 +672,21 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">2 ms</div>
+<div class="time">1 ms</div>
 </em><em class="status">passed</em>testSearchPrefixWithBounds</span>
+<ul>
+<li class="text">
+<span class="stdout">Pushing st<br/>Pushing rd<br/>Pushing ah<br/>Pushing uff<br/>Pushing ings<br/></span>
+</li>
+</ul>
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">3 ms</div>
+<div class="time">2 ms</div>
 </em><em class="status">failed</em>testFalseRemoval</span>
 <ul>
 <li class="text">
-<span class="stdout">Pushing st<br/>Pushing rd<br/>Pushing ah<br/>Pushing uff<br/>Pushing ings<br/>testing prefix...th<br/>testing prefix...st<br/>testing prefix...bl<br/>testing prefix...wo<br/>testing prefix...te<br/> char: h<br/> char: e<br/> char: o<br/></span>
+<span class="stdout">testing prefix...th<br/>testing prefix...st<br/>testing prefix...bl<br/>testing prefix...wo<br/>testing prefix...te<br/> char: h<br/> char: e<br/> char: o<br/></span>
 </li>
 <li class="text">
 <span class="stderr">java.lang.AssertionError<br/>	at org.junit.Assert.fail(Assert.java:86)<br/>	at org.junit.Assert.assertTrue(Assert.java:41)<br/>	at org.junit.Assert.assertTrue(Assert.java:52)<br/>	at DLBTest.testFalseRemoval(DLBTest.java:285)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)<br/>	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)<br/>	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runners.Suite.runChild(Suite.java:127)<br/>	at org.junit.runners.Suite.runChild(Suite.java:26)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)<br/>	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)<br/></span>
@@ -690,12 +695,17 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">1 ms</div>
+<div class="time">0 ms</div>
 </em><em class="status">passed</em>testDLBGrowth</span>
+<ul>
+<li class="text">
+<span class="stdout">DLB.size 1trieSize 0<br/>DLB.size 2trieSize 1<br/>DLB.size 3trieSize 2<br/>DLB.size 4trieSize 3<br/>DLB.size 5trieSize 4<br/></span>
+</li>
+</ul>
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">2 ms</div>
+<div class="time">1 ms</div>
 </em><em class="status">error</em>testNullContains</span>
 <ul>
 <li class="text">
@@ -705,12 +715,9 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">6 ms</div>
+<div class="time">4 ms</div>
 </em><em class="status">failed</em>testWordRemoval</span>
 <ul>
-<li class="text">
-<span class="stdout">DLB.size 1trieSize 0<br/>DLB.size 2trieSize 1<br/>DLB.size 3trieSize 2<br/>DLB.size 4trieSize 3<br/>DLB.size 5trieSize 4<br/>SENTINEL!!!<br/> char: h<br/> char: e<br/> char: l<br/> char: l<br/> char: o<br/>SENTINEL!!!<br/></span>
-</li>
 <li class="text">
 <span class="stderr">java.lang.AssertionError: <br/></span>
 </li>
@@ -733,6 +740,9 @@ jQuery.cookie = function(name, value, options) {
 <div class="time">2 ms</div>
 </em><em class="status">error</em>testNullSearch</span>
 <ul>
+<li class="text">
+<span class="stdout">SENTINEL!!!<br/> char: h<br/> char: e<br/> char: l<br/> char: l<br/> char: o<br/>SENTINEL!!!<br/></span>
+</li>
 <li class="text">
 <span class="stderr">java.lang.NullPointerException<br/>	at java.lang.StringBuilder.&lt;init&gt;(StringBuilder.java:92)<br/>	at DLBTest.testNullSearch(DLBTest.java:358)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)<br/>	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)<br/>	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runners.Suite.runChild(Suite.java:127)<br/>	at org.junit.runners.Suite.runChild(Suite.java:26)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)<br/>	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)<br/></span>
 </li>
@@ -760,7 +770,7 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">3 ms</div>
+<div class="time">2 ms</div>
 </em><em class="status">failed</em>testPrefixRemoval</span>
 <ul>
 <li class="text">
@@ -770,12 +780,9 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">3 ms</div>
+<div class="time">1 ms</div>
 </em><em class="status">error</em>testNullAdd</span>
 <ul>
-<li class="text">
-<span class="stdout"> char: p<br/> char: r<br/> char: e<br/>SENTINEL!!!<br/></span>
-</li>
 <li class="text">
 <span class="stderr">java.lang.NullPointerException<br/>	at DLB.add(DLB.java:85)<br/>	at DLBTest.testNullAdd(DLBTest.java:350)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)<br/>	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)<br/>	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runners.Suite.runChild(Suite.java:127)<br/>	at org.junit.runners.Suite.runChild(Suite.java:26)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)<br/>	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)<br/></span>
 </li>
@@ -785,17 +792,22 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level suite failed open">
 <span><em class="time">
-<div class="time">54 ms</div>
+<div class="time">35 ms</div>
 </em>LinkedListTest</span>
 <ul>
 <li class="level test">
 <span><em class="time">
-<div class="time">41 ms</div>
+<div class="time">33 ms</div>
 </em><em class="status">passed</em>testContainsInsert</span>
+<ul>
+<li class="text">
+<span class="stdout"> char: p<br/> char: r<br/> char: e<br/>SENTINEL!!!<br/></span>
+</li>
+</ul>
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">4 ms</div>
+<div class="time">2 ms</div>
 </em><em class="status">failed</em>testContainsHeadCaseSensitive</span>
 <ul>
 <li class="text">
@@ -808,31 +820,14 @@ jQuery.cookie = function(name, value, options) {
 <div class="time">0 ms</div>
 </em><em class="status">passed</em>testContainsHead</span>
 </li>
-<li class="level test failed open">
+<li class="level test">
 <span><em class="time">
-<div class="time">7 ms</div>
-</em><em class="status">failed</em>testLinkedListGrowth</span>
-<ul>
-<li class="text">
-<span class="stderr">java.lang.AssertionError: <br/></span>
-</li>
-<li class="text">
-<span class="stdout">Expected :<br/></span>
-</li>
-<li class="text">
-<span class="stderr">1<br/></span>
-</li>
-<li class="text">
-<span class="stdout">Actual   :<br/></span>
-</li>
-<li class="text">
-<span class="stderr">0<br/> <br/>	at org.junit.Assert.fail(Assert.java:88)<br/>	at org.junit.Assert.failNotEquals(Assert.java:743)<br/>	at org.junit.Assert.assertEquals(Assert.java:118)<br/>	at org.junit.Assert.assertEquals(Assert.java:555)<br/>	at org.junit.Assert.assertEquals(Assert.java:542)<br/>	at LinkedListTest.testLinkedListGrowth(LinkedListTest.java:64)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)<br/>	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)<br/>	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runners.Suite.runChild(Suite.java:127)<br/>	at org.junit.runners.Suite.runChild(Suite.java:26)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)<br/>	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)<br/></span>
-</li>
-</ul>
+<div class="time">0 ms</div>
+</em><em class="status">passed</em>testLinkedListGrowth</span>
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">2 ms</div>
+<div class="time">0 ms</div>
 </em><em class="status">passed</em>testContainsInsertFalse</span>
 </li>
 <li class="level test">
@@ -849,12 +844,12 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level suite failed open">
 <span><em class="time">
-<div class="time">5 ms</div>
+<div class="time">4 ms</div>
 </em>NodeTest</span>
 <ul>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">4 ms</div>
+<div class="time">3 ms</div>
 </em><em class="status">failed</em>testGetCurrentList</span>
 <ul>
 <li class="text">
@@ -870,7 +865,7 @@ jQuery.cookie = function(name, value, options) {
 <span class="stdout">Actual   :<br/></span>
 </li>
 <li class="text">
-<span class="stderr">LinkedList@6833f0de<br/> <br/>	at org.junit.Assert.fail(Assert.java:88)<br/>	at org.junit.Assert.failNotEquals(Assert.java:743)<br/>	at org.junit.Assert.assertEquals(Assert.java:118)<br/>	at org.junit.Assert.assertEquals(Assert.java:144)<br/>	at NodeTest.testGetCurrentList(NodeTest.java:40)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)<br/>	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)<br/>	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runners.Suite.runChild(Suite.java:127)<br/>	at org.junit.runners.Suite.runChild(Suite.java:26)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)<br/>	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)<br/></span>
+<span class="stderr">LinkedList@67a5a19<br/> <br/>	at org.junit.Assert.fail(Assert.java:88)<br/>	at org.junit.Assert.failNotEquals(Assert.java:743)<br/>	at org.junit.Assert.assertEquals(Assert.java:118)<br/>	at org.junit.Assert.assertEquals(Assert.java:144)<br/>	at NodeTest.testGetCurrentList(NodeTest.java:40)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)<br/>	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)<br/>	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)<br/>	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runners.Suite.runChild(Suite.java:127)<br/>	at org.junit.runners.Suite.runChild(Suite.java:26)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)<br/>	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)<br/>	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)<br/>	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)<br/></span>
 </li>
 </ul>
 </li>
@@ -887,7 +882,7 @@ jQuery.cookie = function(name, value, options) {
 </div>
 </div>
 <div id="footer">
-<p>Generated by IntelliJ IDEA on 10/2/14 9:54 AM</p>
+<p>Generated by IntelliJ IDEA on 10/2/14 12:49 PM</p>
 </div>
 </body>
 </html>

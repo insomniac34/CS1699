@@ -61,8 +61,8 @@ public class LinkedListTest {
         int llSize = 0;
         for (char letter : alphabet) {
             linkedList.insert(letter);
-            assertEquals(linkedList.size, llSize);
             llSize++;
+            assertEquals(linkedList.size, llSize);
         }
     }
 

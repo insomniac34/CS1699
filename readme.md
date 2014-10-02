@@ -38,6 +38,7 @@ Failing Tests:
 
 DLBTest.testFindSentinel ->java.lang.NullPointerException
 
+This test fails because DLB.findSentinel does not correctly handle null values returned from a mocked linked list.
 
 DLBTest.warandPeaceTest -> java.lang.NullPointerException
 
@@ -75,12 +76,9 @@ LinkedListTest.testContainsHeadCaseSensitive -> java.lang.AssertionError
 
 This test fails because the linked list, when searched for a different case of a char value that it contains, does not search for the char value in a case insensitive way.
 
-
-LinkedListTest.LinkedListGrowth -> java.lang.AssertionError
-
-
 NodeTest.testGetCurrentList -> java.lang.AssertionError
 
+This test fails because the getCurrentList method is flawed.
 
 All of our code and accompanying files are located in our github repo:
 https://github.com/insomniac34/CS1699
