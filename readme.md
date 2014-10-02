@@ -30,11 +30,11 @@ Node.java
 
 Concerns
 
-*description of issues faced when writing these tests*
+*insert description of issues faced when writing these tests*
 
-*issues expected going forward based on experiences*
+*insert issues expected going forward based on experiences*
 
-*detail all failing tests in concerns section*
+*insert detail all failing tests in concerns section*
 
 Failing Tests:
 
@@ -43,27 +43,35 @@ DLBTest.testFindSentinel ->java.lang.NullPointerException
 
 DLBTest.warandPeaceTest -> java.lang.NullPointerException
 
+This test correctly adds every word from the novel War and Peace into the DLB structure and correctly finds some of them in the DLB in the lookup phase but fails to find all the words it added. It is not entirely clear why this occurs, it is possible that memory errors could be the cause or edge case words could be causing the problem.
 
 DLBTest.testFalseRemoval -> java.lang.AssertionError
 
+The DLB does not return true when attempting to remove a word that has been added to it. It is likely that the DLB.remove method is flawed.
 
 DLBTest.testNullContains -> java.lang.NullPointerException
 
+This test fails because the DLB.contains method does not correctly handle null values passed to it.
 
 DLBTest.testWordRemoval -> java.lang.AssertionError
 
+This test fails because the DLB.searchPrefix is still indicating by int value code that a word that has been removed is still a prefix. This is likely due to a flaw in the DLB.remove method that fails to remove prefixes from the structure.
 
 DLBTest.testNullSearch -> java.lang.NullPointerException
 
+This test fails because the DLB.searchPrefix method fails to correctly handle null values that are passed to it.
 
 DLBTest.testSixFigString -> java.lang.Exception: test timed out after 100000 milliseconds
 
+Interestingly, this test times out after 100 seconds. The test attempts to pass a Stringbuilder of six-figure length to the searchPrefix method after adding it. This is interesting because stringbuilders of smaller lengths cause no comparable delay. It would appear as though we have found an edge case.
 
 DLBTest.testPrefixRemoval -> java.lang.AssertionError
 
+This test removes the prefix of a word that is already contained in the dictionary after also adding that prefix. This test likely fails because the DLB.contains method fails to correctly return after a string on the same path has been removed.
 
 DLBTest.testNullAdd -> java.lang.NullPointerException
 
+This test fails because the DLB.add fails to correctly handle nulls that are passed to it.
 
 LinkedListTest.testContainsHeadCaseSensitive -> java.lang.AssertionError
 
